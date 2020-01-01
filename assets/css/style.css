@@ -3,7 +3,7 @@ body {
     font-family: 'Permanent Marker', cursive;
     text-decoration: underline;
     background: url("../images/spikes.png");
-    color: lavender;
+    color: rgb(30, 30, 133);
 }
 
 .ss {
