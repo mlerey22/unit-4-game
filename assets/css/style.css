@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    text-decoration: underline;
+    background: url("../images/spikes.png");
+    color: lavender;
+}
+
+.ss {
+    border-style: solid;
+    border-width: 3px;
+    border-color: grey;
+    background-color: lightslategray;
+   
+    
+}
+#wordMain {
+    text-decoration: none;
+    color: rgb(161, 9, 9);
+    
+}
+
+#two {
+    display: none;
+    max-width:1000px;
+    
+}
+#three {
+    display: none;
+    max-width:1000px;
+    
+}
+.state {
+    padding-top: 3%;
+}
+
