@@ -31,7 +31,11 @@ function start() {
         var rGem = Math.floor(Math.random() * (20) + 1); 
         var gGem = Math.floor(Math.random() * (20) + 1);
         var yGem = Math.floor(Math.random() * (20) + 1);
-        var bGem = Math.floor(Math.random() * (20) + 1);
+        if (rGem == 1 || gGem == 1 || yGem == 1) {
+            var bGem = Math.floor(Math.random() * (20) + 1);
+        } else {
+            var bGem =1;
+        };
 
 
         $("#greenGem").on("click", function() {
