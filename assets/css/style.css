@@ -46,4 +46,8 @@ body {
 button {
     border-width: 3%;
     border-color: gold;
+    
+}
+.rule {
+    padding: 4%;
 }
