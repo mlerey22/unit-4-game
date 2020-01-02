@@ -42,8 +42,8 @@ function start() {
         $("#greenGem").on("click", function() {
             score = score + gGem;
             console.log(score);
-            $("#playerNumber").html(score)
-            check()
+            $("#playerNumber").html(score);
+            check();
 
         });
 
@@ -83,4 +83,4 @@ function check (){
     } 
 };
 
-})
+});

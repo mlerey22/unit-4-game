@@ -37,3 +37,10 @@ body {
 .rule {
     margin-top: 20px;
 }
+.gems {
+    width: 85px;
+    height: 90px;
+}
+.scores {
+    text-decoration: none;
+}
