@@ -14,11 +14,6 @@ body {
    
     
 }
-#wordMain {
-    text-decoration: none;
-    color: rgb(161, 9, 9);
-    
-}
 
 #two {
     display: none;
@@ -38,10 +33,17 @@ body {
     margin-top: 20px;
 }
 .gems {
-    width: 85px;
-    height: 90px;
+    width: 100%;
+    height: 100%;
     align-content: center;
 }
 .lett {
     text-decoration: none;
+}
+.rule {
+    text-decoration: none;
+}
+button {
+    border-width: 3%;
+    border-color: gold;
 }
