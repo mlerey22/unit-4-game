@@ -3,10 +3,11 @@ var win = 0
 var loss = 0
 var randomNumber 
 var score = 0
-var bGem 
-var yGem
-var gGem
-var rGem
+var bGem = 0
+var yGem = 0
+var gGem = 0
+var rGem = 0
+
 
 $("#start").on("click", function() {
     $("#start").remove();
@@ -16,27 +17,27 @@ $("#start").on("click", function() {
 
 function restart() {
     score = 0;
+    $("#playerNumber").html(score);
     start()
-    $("#playerNumber").html(score)
-
-}
+};
 
 function start() {
+    
 
         var minNumber = 19; 
-        var randomNumber = Math.floor(Math.random() * (121) + minNumber); 
+        randomNumber = Math.floor(Math.random() * (121) + minNumber); 
         $('#mainNumber').html(randomNumber);
         console.log(randomNumber);
 
-        var rGem = Math.floor(Math.random() * (20) + 1); 
-        var gGem = Math.floor(Math.random() * (20) + 1);
-        var yGem = Math.floor(Math.random() * (20) + 1);
+        rGem = Math.floor(Math.random() * (20) + 1); 
+        gGem = Math.floor(Math.random() * (20) + 1);
+        yGem = Math.floor(Math.random() * (20) + 1);
         if (rGem == 1 || gGem == 1 || yGem == 1) {
-            var bGem = Math.floor(Math.random() * (20) + 1);
+            bGem = Math.floor(Math.random() * (20) + 1);
         } else {
-            var bGem =1;
+            bGem = 1;
         };
-
+};
 
         $("#greenGem").on("click", function() {
             score = score + gGem;
@@ -67,6 +68,7 @@ function start() {
             check()
 
         });
+    
 function check (){
     if (randomNumber == score) {
         win++;
@@ -74,12 +76,11 @@ function check (){
         restart()
         
     }
-    else if (randomNumber < score) {
+    else if (score > randomNumber) {
         loss++;
         $("#losses").html(loss);
-        restart()
-        
-    }
+        restart()   
+    } 
 };
-};
+
 })
