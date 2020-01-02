@@ -9,20 +9,15 @@ var gGem
 var rGem
 
 $("#start").on("click", function() {
-    $("#start").addClass("hide");
-    $("#restart").addClass("hide");
-    start()
-});
-$("#restart").on("click", function() {
-    $("#restart").addClass("hide");
-    $("#statusImage").attr("src", "assets/images/bluegem.png");
+    $("#start").remove();
     start()
 });
 
+
 function restart() {
-    $(".letter").addClass("disappear");
-    $("#restart").removeClass("hide");
-    $("#letter-display").addClass("hide");
+    score = 0;
+    start()
+    $("#playerNumber").html(score)
 
 }
 
@@ -43,6 +38,7 @@ function start() {
             score = score + gGem;
             console.log(score);
             $("#playerNumber").html(score)
+            check()
 
         });
 
@@ -50,19 +46,36 @@ function start() {
             score = score + rGem;
             console.log(score);
             $("#playerNumber").html(score)
+            check()
 
         });
         $("#blueGem").on("click", function() {
             score = score + bGem;
             console.log(score);
             $("#playerNumber").html(score)
+            check()
 
         });
         $("#yellowGem").on("click", function() {
             score = score + yGem;
             console.log(score);
             $("#playerNumber").html(score)
+            check()
 
         });
-}
+function check (){
+    if (randomNumber == score) {
+        win++;
+        $("#wins").html(win);
+        restart()
+        
+    }
+    else if (randomNumber < score) {
+        loss++;
+        $("#losses").html(loss);
+        restart()
+        
+    }
+};
+};
 })
